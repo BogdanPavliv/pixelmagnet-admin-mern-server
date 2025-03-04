@@ -6,7 +6,7 @@
     Access-Control-Allow-Headers = "Content-Type, Authorization"
 [[redirects]]
   from = "/api/*"
-  to = "http://localhost:3002/:splat" # замініть на локальний порт вашого сервера
+  to = "https://pixelmagnet-admin-mern-server.netlify.app/api/:splat"
   status = 200
 [[redirects]]
   from = "/*"

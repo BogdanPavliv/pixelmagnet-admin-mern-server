@@ -20,16 +20,22 @@ const DB_NAME = process.env.DB_NAME
 
 // Middleware
 // app.use(cors())
-app.use(
-    cors({
-      origin: 'https://pixelmagnet-mongodb-client.netlify.app',
-      methods: 'GET, POST, OPTIONS, PUT, DELETE',
-      allowedHeaders: 'Content-Type, Authorization',
-    })
-);
+app.use(cors({
+    origin: ['https://pixelmagnet-mongodb-client.netlify.app', 'http://localhost:3000'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true,
+  }));
+  
 app.use(fileUpload())
 app.use(express.json())
 app.use(express.static('uploads'))
+
+app.use((req, res, next) => {
+    console.log(`Incoming request: ${req.method} ${req.url}`, req.body);
+    next();
+});
+
 
 // Routes
 // http://localhost:3002
