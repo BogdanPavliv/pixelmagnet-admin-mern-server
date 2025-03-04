@@ -20,7 +20,7 @@ const DB_NAME = process.env.DB_NAME
 
 // Middleware
 // app.use(cors())
-app.use(cors({ origin: 'https://pixelmagnet-mongodb-client.netlify.app' }));
+app.use(cors({ origin: 'https://cors-anywhere.herokuapp.com/' }));
 app.use(fileUpload())
 app.use(express.json())
 app.use(express.static('uploads'))
