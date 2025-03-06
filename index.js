@@ -47,9 +47,12 @@ app.use('/api/comments', commentRoute)
 
 async function start() {
     try {
-        await mongoose.connect(
-            process.env.MONGO_URL,
-        )
+        await mongoose.connect(process.env.MONGO_URL, {
+             useNewUrlParser: true,
+             useUnifiedTopology: true,
+             tlsAllowInvalidCertificates: true,
+             tlsAllowInvalidHostnames: true,
+            });
 
         app.listen(PORT, () => console.log(`Server started on port: ${PORT}`))
     } catch (error) {
