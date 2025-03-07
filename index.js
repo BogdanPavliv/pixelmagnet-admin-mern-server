@@ -21,7 +21,7 @@ const DB_NAME = process.env.DB_NAME
 // Middleware
 // app.use(cors())
 app.use(cors({
-    origin: ['https://pixelmagnet-mongodb-client.netlify.app', 'http://localhost:3000'],
+    origin: ['https://pixelmagnet-mongodb-client.netlify.app','https://pixelmagnet-admin-mern-client.netlify.app' , 'http://localhost:3000'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true,
