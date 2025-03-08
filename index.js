@@ -35,7 +35,7 @@ app.use(express.static('uploads'))
 //     console.log(`Incoming request: ${req.method} ${req.url}`);
 //     next();
 // });
-
+// 
 
 // Routes
 // http://localhost:3002
