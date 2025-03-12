@@ -4,7 +4,7 @@ import Comment from '../models/Comment.js'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
-// 
+// Create Post
 export const createPost = async (req, res) => {
     try {
         const { title, text } = req.body
